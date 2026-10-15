@@ -1,21 +1,16 @@
 <?php
 
-class Filme {
-    public string $nome;
-    public int $anoLancamento;
-    public string $genero;
-    public array $notas = [];
-
-    public function avalia(float $nota): void
+// usando o conceito de Herança usando o 'extends'
+class Filme extends Titulo
+{
+    public function __construct(
+        string $nome,
+        int $anoLancamento,
+        Genero $genero,    
+    public readonly int $duracaoEmMinutos, 
+    )
+     
     {
-        $this->notas[] = $nota;
-    }
-
-    public function media(): float
-    {
-        $somaNotas = array_sum($this->notas);
-        $quantidadeDeNotas = count($this->notas);
-
-        return $somaNotas / $quantidadeDeNotas;
+        parent::__construct($nome, $anoLancamento, $genero);
     }
 }
