@@ -1,6 +1,6 @@
 <?php
 
-class Titulo
+abstract class Titulo implements Avaliavel
 {
     private array $notas;
 
@@ -28,8 +28,6 @@ class Titulo
         return $somaNotas / $quantidadeDeNotas;
     }
 
-    public function duracaoEmMinutos(): int
-    {
-        return 0;
-    }
+    // implementação de método abstrato
+    abstract public function duracaoEmMinutos(): int;
 }
