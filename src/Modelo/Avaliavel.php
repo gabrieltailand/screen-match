@@ -1,6 +1,7 @@
 <?php
 
-// Todos os métodos são abstratos
+namespace ScreenMatch\Modelo;
+
 interface Avaliavel
 {
     public function avalia(float $nota): void;
